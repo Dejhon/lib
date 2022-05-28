@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title%></title>
+
+    <link rel="stylesheet" href="/css/checkout.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a onclick="history.back()">Library</a></li>
+        </ul>
+    </nav>
+
+        <table border="0" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Price</th>        
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% if(data.length){
+   
+                    for(var i = 0; i< data.length; i++) {%> 
+                <form action="/order/orders" method="post">
+                  <tr>
+                      <td> <input type="hidden" name="description" value="<%= data[i].Book %>"><%= data[i].Book %></td>
+                      <td> <input type="hidden" name="price" value="<%= data[i].Price %>"><%= data[i].Price %></td>
+                      <td> <input type="hidden" name="stat" value="<%= data[i].Status %>"><%= data[i].Status %></td>
+                  </tr>
+                  <% }
+             
+                   }else{ %>
+                        <tr>
+                            <td colspan="3">No Orders Found</td>
+                        </tr>
+                   <% } %>   
+            </tbody>
+            <tfoot>
+            </form> 
+            </tfoot>
+        </table>
+</body>
+</html>

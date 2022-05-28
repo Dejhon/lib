@@ -33,7 +33,7 @@ router.post('/borrow',(req, res, next)=>{
         let sqlQuery = "INSERT INTO checkout SET ?" 
         connection.query(sqlQuery,data, function(err,result){
         if(err) throw err
-        res.redirect('/books/bk');   
+        res.redirect('/cart/rental');   
     });   
 })
 

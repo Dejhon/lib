@@ -22,6 +22,7 @@ var register = require('./routes/resgister');
 var auth = require('./routes/auth');
 var login = require('./routes/login');
 var bk = require('./routes/books');
+var checkout = require('./routes/checkout');
 
 var app = express();
 
@@ -60,6 +61,7 @@ var app = express();
  app.use('/auths',auth);
  app.use('/login',login);
  app.use('/books',bk);
+ app.use('/cart',checkout );
  app.listen(port, () => console.log(`Listening on port ${port}..`));
 
  module.exports = app;
