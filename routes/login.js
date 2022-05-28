@@ -10,4 +10,11 @@ router.get('/student', function(req, res, next){
     });
 });
 
+router.get('/administration', function(req, res, next){
+    res.render('adminlogin',{
+        title:'Login',
+        // users: rows
+    });
+});
+
 module.exports = router;
