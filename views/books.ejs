@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="/css/books.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <input type="hidden" name="username" value="<%= user %>">
+                <div class="welcome">Stony Hill Primary</div>
+                <li><a href="/checkout/myCart"><i class="fa fa-shopping-cart" style="font-size:24px"></i> Cart</a></li>
+                <li><a href="/auths/logout"><i class="fa fa-sign-out" style="font-size:24px"></i> Log out</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+         
+         <div class="container">
+             <section>
+                 <div class="breakfast">
+                     <div class="pic">
+                         <img src="/pictures/books.jpg">
+                         <div class="overlay"></div>
+                         <div class="text">BOOKS</div>
+                     </div>
+                     <div class="menu">
+                        <% if(data.length){ %>
+                            <% for(var i = 0; i < data.length; i++) { %>
+                         <form action="/cart/addToCart" method="post">
+                                    <input type="hidden" value="<%= user %>" name="username">
+                                     
+                                    <div class="card">
+                                    <div class="order">
+                                        <div class="id">
+                                            <input type="hidden" value="<%= data[i].id %>" name="id">
+                                        </div>
+                                        <div class="breakfast_des">
+                                            <input type="hidden" value="<%= data[i].title %>" name="title">
+                                            <%= data[i].title %>
+                                        </div>
+                                        <div class="orderbtn">
+                                            <div class="price">
+                                                <input type="hidden" value="<%= data[i].cost %>" name="price">
+                                                <h3>$<%= data[i].cost %></h3>
+                                            </div>
+                                            <input type="submit" value="BORROW">
+                                        </div>
+                                    </div>
+                                    </div> 
+                        </form>
+                                        
+                            <% } %>      
+                        <% }else{ %>
+                            <div>
+                                <h3>No Data Found</h3>
+                            </div>
+                         <% } %>   
+                     </div>
+                 </div>
+         </div>
+    </main>
+    <footer class="footer-distributed">
+
+        <div class="footer-right">
+
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-github"></i></a>
+
+        </div>
+
+        <div class="footer-left">
+
+            <p class="footer-links">
+                <a class="link-1" href="#">Home</a>
+
+                <a href="#">Blog</a>
+
+                <a href="#">Pricing</a>
+
+                <a href="#">About</a>
+
+                <a href="#">Faq</a>
+
+                <a href="#">Contact</a>
+            </p>
+
+            <p>Stony Hill Primary &copy; 2015</p>
+        </div>
+
+    </footer>
+    
+</body>
+</html>

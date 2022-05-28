@@ -1,0 +1,117 @@
+body{
+    background-image: url("/video/pexels-pixabay-260922.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.return{
+    margin-left: 20px;
+    margin-top: 20px;
+    border: 1px solid white;
+    width: 135px;
+}
+
+.return button{
+    background-color: transparent;
+    border:none;
+    color: white;
+    font-size: 24px;
+    outline: none;
+    margin-left: 5px;
+}
+
+.return button:focus{
+    outline: none;
+}
+
+.return button a{
+    text-decoration: none;
+    color: white;
+}
+
+.return button i{
+    font-size:26px;
+    margin-top:-10px;
+}
+
+form{
+    background-color:burlywood;
+    opacity: 90%;
+    margin: auto;
+    width: 300px;
+    border: 1px solid wheat;
+    border-radius: 8px;
+    margin-top: 100px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    text-align: center;
+    /* box-shadow: 11px 15px 19px 4px rgba(0,0,0,0.88);
+    -webkit-box-shadow: 11px 15px 19px 4px rgba(0,0,0,0.88);
+    -moz-box-shadow: 11px 15px 19px 4px rgba(0,0,0,0.88); */
+}
+
+input{
+    border: 1px solid gray;
+    outline: none;
+    border-radius: 5px;
+}
+
+#pw{
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 190px;
+    height: 28px;
+    margin-left: 30px;
+    background-color: white;
+}
+
+#pw input{
+    border: none;
+    outline: none;
+    background-color:transparent;
+}
+
+#myInput{
+    margin-left: -75px;
+    margin-top: 1px;
+    position: absolute;
+}
+
+.eyes{
+    margin-left: 70px;
+    cursor: pointer;
+    position: relative;
+}
+
+label{
+    float: left;
+    margin-left: 30px;
+}
+
+.pass{
+    margin-top: 16px;
+}
+
+.route{
+    margin-left: -90px;
+}
+
+.route small a{
+    color: brown;
+}
+
+
+.submit input{
+    background-color: brown;
+    color: white;       
+    border: 1px solid brown;  
+    text-align: center;   
+    width: 120px;
+    height: 35px;
+    letter-spacing: 2px;
+    font-size: 20px;
+    margin-top: 20px;
+}

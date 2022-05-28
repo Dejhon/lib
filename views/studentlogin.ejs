@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/css/studentlogin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class="return">
+        <button><a href="/"><i class="fa fa-angle-double-left"></i> RETURN </a></button>
+    </div>
+
+      <form action="/auths/studentlogin" method="post" autocomplete="off">
+          <h1><%= title  %></h1>
+          <div class="container">
+              <div class="name">
+                  <label>Username:</label><br>
+                  <input type="text" placeholder="username" name="user_name">
+              </div>             
+              <div class="pass">
+                  <label>Password:</label><br>
+                  <div id="pw">
+                  <input type="password" id="myInput" name="password" placeholder="Password" required> 
+                  <span class="eyes" id="eyes" onclick="showPassword()"> show</span>
+                </div>
+              </div>
+              <div class="route">
+                  <small><a href="/adduser/user"><u>Sign up Instead?</u></a></small>
+              </div>
+              <div class="submit">
+                  <input type="submit" value="LOGIN">
+              </div>
+          </div>
+      </form>
+
+      <script>
+          function showPassword() {
+                var x = document.getElementById("myInput");
+                if (x.type === "password") {
+                    x.type = "text";
+                    document.getElementById('eyes').innerHTML = "hide";
+                } else {
+                    x.type = "password";
+                    document.getElementById('eyes').innerHTML = "show";
+                  }
+           }
+      </script>
+
+</body>
+</html>
