@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+
+    <link rel="stylesheet" href="/css/signup.css"
+</head>
+<body>
+       <h1><%= title %></h1>
+       <form action="/register/addstudent" method="post" autocomplete="off">
+           <div class="container">
+                <div class="name">
+                    <div class="fname">
+                        <input type="text" name="first_nm" placeholder="Firstname">
+                    </div>
+                    <div class="lname">
+                        <input type="text" name="last_nm" placeholder="Lastname">
+                    </div>
+                </div>
+
+               <div class="user">
+                   <input type="email" name="user_nm" placeholder="Email">
+               </div>
+               <div class="password">
+                <input type="password" name="password" placeholder="Password">
+               </div>
+               <div class="submit_btn">
+                   <input type="submit" value="SIGN UP">
+               </div>
+        </div>
+       </form>
+</body>
+</html>

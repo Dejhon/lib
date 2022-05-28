@@ -1,0 +1,41 @@
+h1{
+    text-align: center;
+}
+
+form{
+    margin: auto;
+    width: 400px;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+}
+
+input{
+    height: 25px;
+    width: 200px;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: black;
+}
+
+input[type=submit]{
+    width: 100px;
+    color: white;
+    border: 1px solid blue;
+    border-radius: 5px;
+    font-size: 18px;
+    background-color: blue;
+}
+
+.name{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.name, .user, .password, .submit_btn{
+    margin-top: 25px;
+}

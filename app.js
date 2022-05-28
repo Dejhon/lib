@@ -18,6 +18,7 @@ var mysql = require('mysql');
 var connection  = require('./library/db');
 
 var homeRouter = require('./routes/index');
+var register = require('./routes/resgister');
 
 var app = express();
 
@@ -52,6 +53,7 @@ var app = express();
  
  
  app.use('/',homeRouter);
+ app.use('/register',register)
  app.listen(port, () => console.log(`Listening on port ${port}..`));
 
  module.exports = app;
