@@ -14,7 +14,8 @@
         <nav>
             <ul>
                 <input type="hidden" name="username" value="<%= user %>">
-                <div class="welcome">Welcome <%= user %></div>
+                <div class="welcome">Welcome <%= user
+                     %></div>
                 <li><a href="/checkout/myCart"><i class="fa fa-shopping-cart" style="font-size:24px"></i> Cart</a></li>
                 <li><a href="/auths/logout"><i class="fa fa-sign-out" style="font-size:24px"></i> Log out</a></li>
             </ul>
@@ -33,13 +34,13 @@
                      <div class="menu">
                         <% if(data.length){ %>
                             <% for(var i = 0; i < data.length; i++) { %>
-                         <form action="/cart/addToCart" method="post">
+                         <form action="/books/borrow" method="post">
                                     <input type="hidden" value="<%= user %>" name="username">
                                      
                                     <div class="card">
                                     <div class="order">
                                         <div class="id">
-                                            <input type="hidden" value="<%= data[i].id %>" name="id">
+                                            <input type="hidden" value="<%= data[i].id %>" name="book_id">
                                         </div>
                                         <div class="breakfast_des">
                                             <input type="hidden" value="<%= data[i].title %>" name="title">

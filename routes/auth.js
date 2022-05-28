@@ -3,19 +3,22 @@ const res = require('express/lib/response');
 var router = express.Router();
 var connection  = require('../library/db');
 
-router.post('/studentlogin/', function(req, res, next) {
+router.post('/studentlogin', function(req, res, next) {
    
         var username = req.body.user_name;
         var password = req.body.password;
+
         connection.query('SELECT * FROM students WHERE BINARY user_nm = ? AND BINARY password = ?', [username, password], function(err, rows, fields) {
             if(err) throw err
+            // console.log(rows[0].id)
                 if (rows.length <= 0) {
                     res.redirect('/login/student')
                 }
                 else {
                     req.session.loggedin = true;
                     req.session.user_nm = username;
-                       res.redirect('/books/bk')
+                    req.session.user_id = rows[0].id;
+                    res.redirect('/books/bk')
                     }            
                 })                    
 })
