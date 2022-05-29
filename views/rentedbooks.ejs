@@ -32,8 +32,8 @@
                       <td> <%= data[i].First_Name %> </td>
                       <td> <input type="hidden" name="description" value="<%= data[i].Book %>"><%= data[i].Book %></td>
                       <td> <input type="hidden" name="price" value="<%= data[i].Price %>"><%= data[i].Price %></td>
-                      <td> <%= data[i].Date_Rented %> </td>
-                      <td> <%= data[i].duedate %> </td>
+                      <td> <%= data[i].Date_Rented %> </td>                     
+                      <td id="duedate">  <input type="hidden" id="duedate" value="<%= data[i].duedate %>"><%= data[i].duedate %> </td>                     
                       <td> <input type="hidden" name="stat" value="<%= data[i].Status %>"><%= data[i].Status %></td>
                       <td>
                           <button><a href="/rent/edit/<%= data[i].ID_num %>">EDIT</a></button>

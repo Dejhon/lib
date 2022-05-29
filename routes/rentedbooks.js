@@ -12,7 +12,8 @@ router.get('/bk', function(req, res, next){
         res.render('rentedbooks',{
             title:"Rented Books",
             data: rows,
-            user: req.session.user_nm
+            user: req.session.user_nm,
+            today: new Date()
         });
     });
 });
